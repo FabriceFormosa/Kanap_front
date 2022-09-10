@@ -14,7 +14,9 @@ function main()
 // via l 'API grace à un fetch
 function load_items()
 {
-  fetch("http://localhost:3000/api/products")
+  //console.log(process.env.)
+  fetch('https://beige-giraffe-tux.cyclic.app/api/products')
+  //fetch("http://localhost:3000/api/products/")
   .then(function(res) {
     if (res.ok) {
       return res.json();
@@ -54,7 +56,7 @@ function display_items(items)
     article.appendChild(p);
     urlArticle.appendChild(article);
     
-    urlArticle.href="./product.html?id="+item['_id'];  
+    urlArticle.href="html/product.html?id="+item['_id'];  
 
     articles.appendChild(urlArticle);
     

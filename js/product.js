@@ -56,7 +56,8 @@ function dsp_cart_shopping()
 // les datas du produit selectionné dans la page accueil
 function load_item_by_id()
 {
-    fetch("http://localhost:3000/api/products/"+id)
+    fetch("https://beige-giraffe-tux.cyclic.app/api/products/"+id)
+    //fetch("http://localhost:3000/api/products/"+id)
     .then(function(res) {
         if (res.ok) {
             return res.json();

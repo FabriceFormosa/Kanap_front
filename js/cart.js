@@ -230,7 +230,7 @@ function get_order(){
         // array de strings product-ID. Les types de ces champs et leur présence doivent être validés
         // avant l’envoi des données au serveur.
         
-        fetch("http://localhost:3000/api/products/order", {
+        fetch("https://beige-giraffe-tux.cyclic.app/api/products/order", {
         method: "POST",
         headers: {
             Accept: "application/json",
@@ -301,7 +301,7 @@ function total_price(param)
         
         if( price_updated == 0)
         {   
-            fetch("http://localhost:3000/api/products/"+id_article)
+            fetch("https://beige-giraffe-tux.cyclic.app/api/products/"+id_article)
             .then(function(res) {
                 if (res.ok) {
                     return res.json();
@@ -352,7 +352,8 @@ function load_produit()
     if( cart_updated == 0)
     {  
         //console.log("fonction load_produit fetch url : "+"http://localhost:3000/api/products/"+id_article)
-        fetch("http://localhost:3000/api/products/"+id_article)
+        //fetch("http://localhost:3000/api/products/"+id_article)
+        fetch("https://beige-giraffe-tux.cyclic.app/api/products/"+id_article)
         .then(function(res) {
             if (res.ok) {
                 return res.json();
